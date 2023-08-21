@@ -1,0 +1,13 @@
+def announce(f):
+    def wrapper():
+        print (f"About run function {f}")
+        f()
+        print ("Executed function ")
+    return wrapper
+
+@announce
+def hello():
+    print ("Hellow world")
+
+
+hello()
